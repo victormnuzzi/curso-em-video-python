@@ -4,13 +4,17 @@ FUPQ tenha uma função chamada voto() que vai receber como parâmetro o ano de 
 
 def voto(ano_nasc):
     idade = 2023 - ano_nasc
-    if idade >= 18:
-        print('Você deve votar.')
+    if 60 > idade >= 18:
+        frase = f'Com {ano_nasc} anos: VOTO OBRIGATÓRIO.'
     elif 18 > idade >= 16:
-        print('Voce já pode votar.')
+        frase = f'Com {ano_nasc} anos: VOTO OPCIONAL..'
     else:
-        print('Você ainda não pode votar') 
+        frase = f'Com {ano_nasc} anos: NÃO VOTA.'
+    return frase 
 
-voto(int(input('Digite o seu ano de nascimento: ')))
 
-# %%
+# Programa principal
+print('-' * 30)
+ano = int(input('Em que ano você nasceu? '))
+voto(ano)
+
