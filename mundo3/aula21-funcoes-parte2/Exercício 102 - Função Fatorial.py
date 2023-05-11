@@ -7,7 +7,7 @@ def fatorial(n, show=False):
     '''
     -> Calcula o fatorial de um número inteiro escolhido pelo usuário
     :param n: O número inteiro a ser calculado
-    :param show: Mostra ou não a conta
+    :param show: (Opcional) Mostra ou não a conta
     :return: O valor do fatorial do número escolhido pelo usuário
     '''
     # verificacao se s é True (print do cálculo) ou False (sem print do cálculo)
