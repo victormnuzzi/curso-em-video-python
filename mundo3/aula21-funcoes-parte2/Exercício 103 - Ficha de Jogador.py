@@ -7,6 +7,11 @@ O programa deverá ser capaz de mostrar a ficha do jogador, mesmo que algum dado
 
 # função ficha(nome='<desconhecido>', gol=0)
 def ficha(n='<desconhecido>',g=0):
+    ''''
+    -> Registro de nome de jogador e quantos gols ele fez
+    :param n: O nome do jogador
+    :param g: O número de gols marcados pelo jogador
+    '''
     # return com nome e gols
     print(f'O jogador {n} fez {g} gol(s) no campeonato.')
 
@@ -18,7 +23,6 @@ nome = input('Nome do Jogador:  ')
 
 # input do gol
 gol = str(input('Número de Gol(s): '))
-
 
 # verificação para ver se gol é númerico 
 if gol.isnumeric(): # se for, gol vira inteiro
