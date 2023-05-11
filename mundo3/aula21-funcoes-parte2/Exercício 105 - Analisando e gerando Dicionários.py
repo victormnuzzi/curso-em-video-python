@@ -16,43 +16,28 @@ def notas(*n, sit=False):
     :param sit: (Opcional) Indica se deve ou não adicionar a situção
     :return: Um dicionário com várias informações sobre a situação da turma
     ''' 
-    # declaração das variáveis
-    quant, media, maior, menor, situacao = 0, 0, 0, 10, ''
+    tn = dict()
+    tn['total'] = len(n)
+    tn['maior'] = max(n)
+    tn['menor'] = min(n)
+    tn['média'] = sum(n) / len(n)
 
-    # verificar a quantidade de notas
-    quant = len(n)
-
-    # a função vai criar uma tupla com as notas
-    for nota in n: # para cada nota na tupla notas vai adicionar no dicionário
-        # verificar qual nota é a maior
-        if nota > maior:
-            maior = nota
-        # verificar qual nota é a maior
-        if nota < menor:
-            menor = nota
-        # calcular a média das notas
-        media += nota
-    media /= quant
-
-    # calcular situação do aluno com base na média
-    if media >= 8.5:
-        situacao = 'ÓTIMA'
-    if 8.5 > media >= 7.5:
-        situacao = 'BOA'
-    if 7.5 > media >= 6:
-        situacao = 'RAZOÁVEL'
-    if 6 > media >= 4.5 :
-        situacao = 'RUIM'
-    if 4.5 > media:
-        situacao = 'MUITO RUIM'
-
-    # adicionando as variáveis no dicionário
-    tn = {'total': quant, 'maior': maior, 'menor': menor, 'média': media, 'situação': situacao}
     # verificando se terá a situação
-    if not sit: # se sit=False
-        del tn['situação'] # apagar a key 'situação'
-    return tn
+    if sit: # se sit=True
+        # calcular situação do aluno com base na média
+        # adiciona a key 'situação' e o value "text" ao dicionário
+        if tn['média'] >= 8.5:
+            tn['situação'] = 'ÓTIMA'
+        elif 8.5 > tn['média'] >= 7.5:
+            tn['situação'] = 'BOA'
+        elif 7.5 > tn['média'] >= 6:
+            tn['situação'] = 'RAZOÁVEL'
+        elif 6 > tn['média'] >= 4.5 :
+            tn['situação'] = 'RUIM'
+        elif 4.5 > tn['média']:
+            tn['situação'] = 'MUITO RUIM'
 
+    return tn
 
 
 # Programa principal
