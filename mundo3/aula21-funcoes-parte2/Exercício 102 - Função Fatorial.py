@@ -11,7 +11,7 @@ def fatorial(n, show=False):
     :return: O valor do fatorial do número escolhido pelo usuário
     '''
     # verificacao se s é True (print do cálculo) ou False (sem print do cálculo)
-    if show == True:
+    if show == True: 
         # loop para printar processo de cálculo
         for i in range(n, 0, -1): # vai do número até 0 (na verdade 1) e -1 porque ele vai do maior para o menor
             if i == 1: # se o index (número do cáculo do fatorial) for igual a 1, printar com =
