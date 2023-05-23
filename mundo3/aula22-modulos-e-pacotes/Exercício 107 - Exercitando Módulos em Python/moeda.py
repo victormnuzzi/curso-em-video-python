@@ -8,12 +8,12 @@ def diminuir(preco,taxa):
     return res
 
 
-def dobro(n):
-    res = n * 2
+def dobro(preco):
+    res = preco * 2
     return res
 
 
-def metade(n):
-    res = n / 2
+def metade(preco):
+    res = preco / 2
     return res
 
