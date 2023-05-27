@@ -2,7 +2,7 @@
 Adapte o código do Exercício 107, criando uma função adicional chamada fmoeda() que consiga mostrar os valores como um valor monetário formatado.
 """
 
-import moeda
+from . import moeda
  
 p = float(input('Digite o preço: R$'))
 print(f'\nA metade de {moeda.moeda(p)} é {moeda.moeda(moeda.metade(p))}.')

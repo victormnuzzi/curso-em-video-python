@@ -8,7 +8,7 @@ def aumentar(preco=0, taxa=0, formato=False):
     :return: O valor formatado após o aumento
     '''
     res = preco * (1 + taxa/100)
-    return res if formato is False else moeda(res)
+    return res if formato is False else moedaF(res)
 
 
 def diminuir(preco=0, taxa=0, formato=False):
@@ -21,7 +21,7 @@ def diminuir(preco=0, taxa=0, formato=False):
     :return: O valor após a diminuição
     ''' 
     res = preco * (1 - taxa/100)
-    return res if formato is False else moeda(res)
+    return res if formato is False else moedaF(res)
 
 
 def dobro(preço=0,formato=False):
@@ -33,7 +33,7 @@ def dobro(preço=0,formato=False):
     :return: O dobro do valor
     '''
     res = preço * 2
-    return res if formato is False else moeda(res)
+    return res if formato is False else moedaF(res)
 
 
 def metade(preco=0, formato=False):
@@ -45,9 +45,9 @@ def metade(preco=0, formato=False):
     :return: A metade do valor
     '''
     res = preco / 2
-    return res if formato is False else moeda(res)
+    return res if formato is False else moedaF(res)
 
-def moeda(preco=0, moeda='R$'):
+def moedaF(preco=0, moeda='R$'):
     '''
     -> Formatar o valor no formato R$
     :param preco: O valor que será formatado, sendo pré-definido como 0
@@ -67,7 +67,7 @@ def resumo(preco=0, taxaa=10, taxar=5):
     print('-'*36)
     print('RESUMO DO VALOR'.center(36))
     print('-'*36)
-    print(f'Preço analisado: \t{moeda(preco)}')
+    print(f'Preço analisado: \t{moedaF(preco)}')
     print(f'Dobro do preço: \t{dobro(preco, True)}')
     print(f'Metade do preço: \t{metade(preco, True)}')
     print(f'{taxaa}% de aumento: \t{aumentar(preco, taxaa, True)}')
