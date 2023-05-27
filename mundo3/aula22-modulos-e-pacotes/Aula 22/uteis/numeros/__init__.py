@@ -2,7 +2,6 @@ def fatorial(n):
     '''
     -> Calcular o fatorial de um valor
     :param n: O valor que será calculado do fatorial
-    :param f: O resultado do fatorial
     :return: O fatorial do valor
     '''
     f = 1

@@ -6,9 +6,7 @@ FUPQ tenha uma função chamada voto() que vai receber como parâmetro o ano de 
 def voto(an):
     '''
     -> Verifica a situação do voto do usuário
-    :param aa: O ano atual
     :param an: O ano de nascimento do usuário
-    :param i: A idade do usuário
     :return: A situação do voto do usuário
     '''
     from datetime import date

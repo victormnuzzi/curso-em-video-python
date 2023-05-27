@@ -4,7 +4,6 @@ def aumentar(preco=0, taxa=0, formato=False):
     :param preco: O preço que sofrerá a taxa, sendo pré-definido como 0
     :param taxa: A taxa que será aplicada ao preço, sendo pré-definida como 0
     :param formato: Define se o valor final será formatado com o formato da moeda R$, sendo pré-definido como False
-    :param res: O resultado do preço após a taxa
     :return: O valor formatado após o aumento
     '''
     res = preco * (1 + taxa/100)
@@ -16,8 +15,7 @@ def diminuir(preco=0, taxa=0, formato=False):
     -> Calcular uma diminuição sobre um preço
     :param preco: O preço que sofrerá a taxa, sendo pré-definido como 0
     :param taxa: A taxa que será aplicada ao preço, sendo pré-definida como 0
-    :param formato: Define se o valor final será formatado com o formato da moeda R$, sendo pré-definido como False  
-    :param res: O resultado do preço após a taxa
+    :param formato: Define se o valor final será formatado com o formato da moeda R$, sendo pré-definido como False   taxa
     :return: O valor após a diminuição
     ''' 
     res = preco * (1 - taxa/100)
@@ -29,7 +27,6 @@ def dobro(preço=0,formato=False):
     -> Calcular o dobro de um valor
     :param preco: O valor que será dobrado, sendo pré-definido como 0
     :param formato: Define se o valor final será formatado com o formato da moeda R$, sendo pré-definido como False
-    :param res: O resultado do dobro do valor
     :return: O dobro do valor
     '''
     res = preço * 2
@@ -41,7 +38,6 @@ def metade(preco=0, formato=False):
     -> Calcular a metade de um valor
     :param preco: O valor que será dividido, sendo pré-definido como 0
     :param formato: Define se o valor final será formatado com o formato da moeda R$, sendo pré-definido como False
-    :param res: O resultado da metade do valor
     :return: A metade do valor
     '''
     res = preco / 2
