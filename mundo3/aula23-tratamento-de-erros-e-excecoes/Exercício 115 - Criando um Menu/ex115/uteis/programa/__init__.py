@@ -11,15 +11,13 @@ def sistema():
 
         # Loop da escolha da opção
         escolha = verificacao.vOpcao(quant_opcoes)
-        estetica.titulo(f'OPÇÃO {escolha}', '-')
         match escolha:
             case 1:
-                break
-            case 2:
+                estetica.titulo(f'OPÇÃO {escolha}', '-')
                 
-                break
+            case 2:
+                estetica.titulo(f'OPÇÃO {escolha}', '-')
+                
             case 3:
+                estetica.titulo('Saindo do Sistema... Até logo!', '-')
                 status = 0
-            
-    else:
-        print('Saindo do programa...')
