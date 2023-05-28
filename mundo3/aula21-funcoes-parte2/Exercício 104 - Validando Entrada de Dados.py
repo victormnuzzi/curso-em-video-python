@@ -6,7 +6,7 @@ Ex: n = leiaInt('Digite um n)
 def leiaInt(frase=''):
     '''
     -> Ler um texto e verificar se é um número inteiro
-    :param num: O número escolhido pelo usuário
+    :param frase: A frase do input na função
     :return: O número digitado pelo usuário na forma de inteiro
     '''
     while True:
