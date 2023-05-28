@@ -1,12 +1,8 @@
-"""
-Crie um código em Python que teste se o site Pudim está accesível pelo computador usado.
-"""
-
 # Minha resolução:
-"""
+
 import requests # tive que dar pip install requests
 
-def url_ok(url):
+def url_okV(url):
     '''
     -> Verificar se um site está acessível
     :param url: A url digitada pelo usuário
@@ -18,16 +14,13 @@ def url_ok(url):
         return 'O site Pudim não está disponível no momento.'
     else:
         return 'Consegui acessar o site Pudim com sucesso!'
-    
-    
-print(url_ok('http://pudim.com.br/'))
-"""
+
 
 # Resolução do Guanabara
 
 import urllib.request # biblioteca já instalada no python 
 
-def url_ok(url):
+def url_okG(url):
     '''
     -> Verificar se um site está acessível
     :param url: A url digitada pelo usuário
@@ -41,4 +34,3 @@ def url_ok(url):
         return 'Consegui acessar o site Pudim com sucesso!'
 
     
-print(url_ok('http://pudim.com.br/'))
