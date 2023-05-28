@@ -7,7 +7,7 @@ def sistema():
     while status != 0: # enquanto status nõa for desligado
         # Print Menu Principal e Opções
         estetica.titulo('MENU PRINCIPAL', '=')
-        quant_opcoes = estetica.menuOpcoes('Ver pessoas cadastradas', 'Cadastrar nova Pessoa', 'Sair do Sistema') # quant_opcoes do menu opções
+        quant_opcoes = estetica.menuOpcoes(['Ver pessoas cadastradas', 'Cadastrar nova Pessoa', 'Sair do Sistema']) # quant_opcoes do menu opções
 
         # Loop da escolha da opção
         escolha = verificacao.vOpcao(quant_opcoes)

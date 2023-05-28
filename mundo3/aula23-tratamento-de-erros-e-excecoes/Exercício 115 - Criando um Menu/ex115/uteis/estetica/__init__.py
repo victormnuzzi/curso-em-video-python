@@ -31,10 +31,10 @@ def titulo(text='',c='',t=tamPrograma()):
     print()
 
 
-def menuOpcoes(*items, text=''):
+def menuOpcoes(list=[], text=''):
     '''
     -> Printar um menu com x opções
-    :param items: O texto da opção
+    :param list: A lista com as opções
     :param text: O título do menu
     :return: A quantidade de opções
     '''
@@ -43,7 +43,7 @@ def menuOpcoes(*items, text=''):
         print(text.center(tamPrograma()))
     linha('-', tamPrograma())
     cont = 0 # contador de opções
-    for opcao in items:
+    for opcao in list:
         cont += 1
         print(f'\033[33m{cont}\033[m - \033[34m{opcao}\033[m')
     linha('-', tamPrograma())
