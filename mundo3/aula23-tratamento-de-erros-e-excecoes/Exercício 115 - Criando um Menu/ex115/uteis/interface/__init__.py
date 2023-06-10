@@ -29,6 +29,7 @@ def titulo(text='',c='',t=tamPrograma()):
     print(text.center(len(c*t)))
     linha(c, t)
     print()
+    sleep(0.5)
 
 
 def menuOpcoes(list=[], text=''):
@@ -45,7 +46,7 @@ def menuOpcoes(list=[], text=''):
     cont = 0 # contador de opções
     for opcao in list:
         cont += 1
-        print(f'\033[33m{cont}\033[m - \033[34m{opcao}\033[m')
+        print(f'\033[33m[{cont}]\033\033[34m {opcao}\033[m')
     linha('-', tamPrograma())
     print()
     return cont
